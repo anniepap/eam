@@ -1,0 +1,225 @@
+body {
+	background-color: #f7f1ed;
+}
+
+#page {
+    height: 100%;
+    font-family: Verdana, Arial, sans-serif;
+    position: relative;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#logo {
+    width: 310px;
+    height: 85px;
+}
+
+#search {
+	width: 210px;
+	height: 40px;
+	position: relative;
+	bottom: 90px;
+	left: 690px;
+}
+
+#search input[type="text"] {
+    background: #fcfcfc;
+    font-size: 12px;
+    border: 1px solid #737373;
+    color: #737373;
+    width: 180px;
+    padding: 4px 12px 4px 12px;
+    border-radius: 10px;
+}
+
+#search input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#search input[type="image"] {
+    position: relative;
+    top: 7px;
+    left: 1px;
+}
+
+#profile {
+	width: 160px;
+	height: 40px;
+	position: relative;
+	bottom: 135px;
+	left: 975px;
+    font-size: 13px;
+}
+
+#profile input[type="image"] {
+    position: relative;
+    top: 7px;
+}
+
+#menu {
+	width: 850px;
+	height: 40px;
+	position: relative;
+    bottom: 145px;
+    left: 303px;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #f7f1ed
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn, .dropbtn_active {
+    display: block;
+    color: #330000;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.dropbtn_active {
+    background-color: #efe4dc;
+    border-radius: 10px;
+}
+
+li a:hover, .dropdown:hover .dropbtn{
+    background-color: #efe4dc;
+    border-radius: 10px;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #330000;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+	background-color: #efe4dc
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sidetable {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #330000;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 15;
+    padding-left: 5px;
+    background-color: #efe4dc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sidetable th {
+    border-bottom: 1px solid #330000;    
+}
+
+#dates {
+    position: fixed;
+    top: 130px;
+}
+
+#announs {
+    position: fixed;
+    top: 340px;
+}
+
+#parthenon {
+    height: 400px; 
+    width: 640px;
+    border-radius: 10px;
+    position: absolute;
+    top: 105px;
+    left: 480px;
+    z-index: -1;
+}
+
+#info {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 260px;
+    top: 140px;
+    z-index: -1;
+}
+
+#info h2 {
+    color: #330000;
+    margin-bottom: 0;
+}
+
+#info h3 {
+    color: #330000;
+    margin-top: 5px;
+}
+
+#countdown {
+    width: 250px;
+    height: 120px;
+    position: absolute;
+    left: 260px;
+    top: 300px;
+    z-index: -1;
+}
+
+#countdown h2 {
+    color: #330000;
+    margin-top: 0;
+}
+
+#countdown h4 {
+    color: #330000;
+    margin-bottom: 3px;
+}
+
+#contact {
+    left: 460px;
+    top: 590px;
+    position: absolute;
+    font-size: 12;
+    z-index: -1;
+}
+
+#overview {
+    width: 900px;
+    height: 250px;
+    position: absolute;
+    left: 260px;
+    top: 100px;
+    z-index: -1;
+}
+
+#overview h2 {
+    color: #330000;
+    font-size: 22;
+}
+
+#overview p {
+    text-align: justify;
+    font-size: 15;
+}
