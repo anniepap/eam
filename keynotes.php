@@ -32,7 +32,7 @@
         		<a href="overview.php">Overview</a>
           	<a href="keynotes.php">Keynote Speakers</a>
           	<a href="workshops.php">Workshops</a>
-          	<a href="#">Timetable</a>
+          	<a href="timetable.php">Timetable</a>
         	</div>
       	</li>
       	<li class="dropdown">
@@ -94,7 +94,7 @@
       </tr>
     </table>
     </div>
-    <div id="keynotes">
+    <div id="context">
       <h2>Keynote Speakers</h2>
       <div class="keyspeaker">
         <h4>Prof. Dr. Wolfgang Kippes</h4>

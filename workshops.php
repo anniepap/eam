@@ -32,7 +32,7 @@
         		<a href="overview.php">Overview</a>
           	<a href="keynotes.php">Keynote Speakers</a>
           	<a href="workshops.php">Workshops</a>
-          	<a href="#">Timetable</a>
+          	<a href="timetable.php">Timetable</a>
         	</div>
       	</li>
       	<li class="dropdown">
@@ -94,7 +94,7 @@
       </tr>
     </table>
     </div>
-    <div id="workshops">
+    <div id="context">
       <h2>Workshops</h2>
       <div class="workshop">
         <h4>Joint Workshops: The 1st International Workshop on Virtual Reality, Gamification and Cultural Heritage & The 3rd International Workshop on 3D Research Challenges in Cultural Heritage</h4>

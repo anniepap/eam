@@ -32,7 +32,7 @@
         		<a href="overview.php">Overview</a>
           	<a href="keynotes.php">Keynote Speakers</a>
           	<a href="workshops.php">Workshops</a>
-          	<a href="#">Timetable</a>
+          	<a href="timetable.php">Timetable</a>
         	</div>
       	</li>
       	<li class="dropdown">
@@ -94,7 +94,7 @@
       </tr>
     </table>
     </div>
-    <div id="overview">
+    <div id="context">
       <h2>Overview of the Conference</h2>
       <p>
         The International Conference on Cultural Heritage (CH) brings together researchers, policy makers, professionals and practitioners to explore some of the more pressing issues concerning cultural heritage today. In particular, the main goal of the conference is to focus on interdisciplinary and multi-disciplinary research on tangible and intangible Cultural Heritage, the use of cutting edge technologies for the protection, restoration, preservation, massive digitalization, documentation and presentation of the CH content. At the same time, the event is intended to cover topics of research ready for exploitation, demonstrating the acceptability of new sustainable approaches and new technologies by the user community, SME’s, owners, managers and conservators of cultural patrimony. Several organizations have decided to join together in order to create an optimal environment for the discussion, explanation of new technologies, exchange of modern ideas and in general to allow the transfer of knowledge between a maximum number of professionals and participants during one common time period.
