@@ -31,7 +31,7 @@
     	    <div class="dropdown-content">
         		<a href="overview.php">Overview</a>
           	<a href="keynotes.php">Keynote Speakers</a>
-          	<a href="#">Workshops</a>
+          	<a href="workshops.php">Workshops</a>
           	<a href="#">Timetable</a>
         	</div>
       	</li>
