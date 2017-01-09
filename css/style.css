@@ -64,6 +64,7 @@ body {
 	position: relative;
     bottom: 145px;
     left: 303px;
+    z-index: 1;
 }
 
 ul {
@@ -211,7 +212,6 @@ li.dropdown {
     position: absolute;
     left: 260px;
     top: 100px;
-    z-index: -1;
 }
 
 #context h2 {
