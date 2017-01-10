@@ -21,7 +21,7 @@
   	<div id="profile">
   		<form method="get">
     		<input type="image" src="images/profile_icon.png" width="28" height="28">
-    		<a href="#">Sign in</a> | <a href="#">Sign up</a>
+    		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
   		</form>
   	</div>
   	<div id="menu">
@@ -38,8 +38,8 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">VENUE</a>
     	    <div class="dropdown-content">
-        		<a href="#">Venue Details</a>
-          	<a href="#">Travel and Transport </a>
+        		<a href="venue.html">Venue Details</a>
+          	<a href="travel_transport.html">Travel and Transport</a>
           	<a href="#">About Cyprus</a>
         	</div>
       	</li>
@@ -47,7 +47,7 @@
       		<a href="#" class="dropbtn">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
         		<a href="#">Paper Submission</a>
-        		<a href="guidelines.php">Submission Guidelines</a>
+        		<a href="#">Submission Guidelines</a>
           </div>
       	</li>
       	<li class="dropdown">

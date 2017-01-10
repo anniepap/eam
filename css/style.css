@@ -4,6 +4,7 @@ body {
 
 #page {
     min-height: 100%;
+    max-width: 100%;
     font-family: Verdana, Arial, sans-serif;
     position: relative;
     margin-left: 8%;
@@ -20,7 +21,7 @@ body {
 	height: 40px;
 	position: relative;
 	bottom: 90px;
-	left: 690px;
+	left: 60%;
 }
 
 #search input[type="text"] {
@@ -49,7 +50,7 @@ body {
 	height: 40px;
 	position: relative;
 	bottom: 135px;
-	left: 975px;
+	left: 87%;
     font-size: 13px;
 }
 
@@ -63,7 +64,7 @@ body {
 	height: 40px;
 	position: relative;
     bottom: 145px;
-    left: 303px;
+    right: -27%;
     z-index: 1;
 }
 
@@ -143,11 +144,13 @@ li.dropdown {
 #dates {
     position: fixed;
     top: 130px;
+    z-index: 1;
 }
 
 #announs {
     position: fixed;
     top: 340px;
+    z-index: 1;
 }
 
 #parthenon {
@@ -205,12 +208,10 @@ li.dropdown {
     font-size: 12;
 }
 
-
 #context {
-    width: 860px;
-    height: 250px;
+    width: 78%;
     position: absolute;
-    left: 260px;
+    left: 22%;
     top: 100px;
 }
 
@@ -226,9 +227,7 @@ li.dropdown {
 
 #subjects {
     width: 860px;
-    position: absolute;
-    left: 260px;
-    top: 380px;
+    margin-top: 30px;
 }
 
 #subjects h2 {
@@ -358,4 +357,147 @@ li.dropdown {
     text-decoration: none;
     font-size: 15px;
     float: none;
+}
+
+.timetable h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dayprogram {
+    border: 1px solid #330000;
+    border-collapse: collapse;
+    font-size: 15px;
+    margin-bottom: 30px;
+    background: #f9f9f9;
+}
+
+.dayprogram tr {
+    border: 1px solid #330000;
+    border-collapse: collapse;
+}
+
+.dayprogram td {
+    padding: 5px;
+    border: 1px solid #330000;
+    border-collapse: collapse;
+}
+
+.dayprogram th {
+    font-size: 14px;
+    text-align: left;
+    padding-right: 8px;
+    padding-left: 5px;
+}
+
+.break {
+    background-color: #bea893;
+}
+
+.excursion {
+    background-color: #efe4dc;
+}
+
+#pdfview {
+    font-size: 14px;
+    position: absolute;
+    left: 775px;
+    top: 40px;
+}
+
+#filoxenia_info {
+    width: 280px;
+    height: 330px;
+    position: absolute;
+    top: 15%;
+}
+
+#filoxenia_info h4 {
+    margin-bottom: 12px;
+}
+
+#filoxenia_info ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+#filoxenia_info li {
+    padding-bottom: 5px;
+    font-size: 15px;
+    float: none;
+}
+
+#filoxenia_info a {
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    color: blue;
+    text-decoration-line: underline;
+}
+
+#filoxenia_info p {
+    margin-top: 40px;
+}
+
+.slideshow {
+    position: relative;
+    left: 348px;
+    width: 512px;
+    top: -15px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+#filoxenia_more {
+    position: absolute;
+}
+
+#filoxenia_more h4 {
+    color: #330000;
+    font-size: 16;
+    margin-bottom: 15px;
+}
+
+#filoxenia_more p {
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+#filoxenia_more ul {
+    list-style-type: square;
+    margin: 0;
+    padding-left: 15px;
+}
+
+#filoxenia_more li {
+    text-decoration: none;
+    font-size: 15px;
+    float: none;
+    margin-bottom: 10px;
+}
+
+#map {
+    position: relative;
+    left: 310px;
+    height: 400px;
+    width: 550px;
 }

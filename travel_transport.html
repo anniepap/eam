@@ -1,9 +1,9 @@
 <html>
 <head>
-	<title>
-		Euromed2016 | Home
-	</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>
+    Euromed2016 | Travel and Transport
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div id="page">
@@ -36,7 +36,7 @@
         	</div>
       	</li>
       	<li class="dropdown">
-      		<a href="#" class="dropbtn">VENUE</a>
+      		<a href="#" class="dropbtn_active">VENUE</a>
     	    <div class="dropdown-content">
         		<a href="venue.html">Venue Details</a>
           	<a href="travel_transport.html">Travel and Transport</a>
@@ -94,17 +94,46 @@
       </tr>
     </table>
     </div>
-    <img id="parthenon" src="images/parthenon.jpg"/>
-    <div id="info">
-      <h2>OCT 31 - NOV 5</h2>
-      <h3>Nicosia, Cyprus</h3>
-    </div>
-    <div id="countdown">
-      <h4>Countdown:</h4>
-      <h2>00 : 00 : 00</h2>
-    </div>
-    <div id="contact">
-      <a href="#">Contact us</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    <div id="context">
+      <h2>Travel and Transport</h2>
+      <div id="filoxenia_info">
+        <h4>Filoxenia Conference Center</h4>
+        <ul>
+          <li>Kareas, Aglantzia</li>
+          <li>Nicosia, Cyprus</li>
+          <li>Tel. +357 22 395000</li>
+          <li><a href="http://www.fcc.com.cy/el/" target="_blank">www.fcc.com.cy</a></li>
+        </ul>
+      </div>
+    
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var uluru = {lat: 35.154693, lng: 33.379528};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU9yiEe34gS4Fb4YYNn_eF5Ewy8kM5-QM&callback=initMap">
+      </script>
+
+      <div id="filoxenia_more">
+        <h4>How to reach us</h4>
+        <ul>
+          <li><b>Closest Airport:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis sem et leo tempus dictum. Suspendisse molestie sagittis imperdiet.</li>
+          <li><b>Closest Bus Stations:</b> Nullam id vehicula augue, non tempor tortor. Suspendisse imperdiet velit id sapien auctor dapibus. Suspendisse ac est at leo laoreet scelerisque a non sapien.</li>
+          <li><b>By taxi:</b> Donec eget dui tempor, finibus risus et, dignissim arcu. Vivamus et suscipit massa. Nullam ac est nec lacus tristique tincidunt et at nibh. Curabitur lacinia justo nec ante imperdiet, eget congue massa aliquet.</li>
+          <li><b>By car:</b> Aliquam aliquam mauris sed tellus interdum porta. Morbi feugiat mollis metus, a luctus erat sagittis id. Mauris velit libero, tincidunt vel facilisis sit amet, pharetra eget nulla.</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </body>

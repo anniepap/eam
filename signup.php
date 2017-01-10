@@ -1,9 +1,9 @@
 <html>
 <head>
-	<title>
-		Euromed2016 | Home
-	</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>
+    Euromed2016 | Sign up
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div id="page">
@@ -36,7 +36,7 @@
         	</div>
       	</li>
       	<li class="dropdown">
-      		<a href="#" class="dropbtn">VENUE</a>
+      		<a href="#" class="dropbtn_active">VENUE</a>
     	    <div class="dropdown-content">
         		<a href="venue.html">Venue Details</a>
           	<a href="travel_transport.html">Travel and Transport</a>
@@ -94,17 +94,9 @@
       </tr>
     </table>
     </div>
-    <img id="parthenon" src="images/parthenon.jpg"/>
-    <div id="info">
-      <h2>OCT 31 - NOV 5</h2>
-      <h3>Nicosia, Cyprus</h3>
-    </div>
-    <div id="countdown">
-      <h4>Countdown:</h4>
-      <h2>00 : 00 : 00</h2>
-    </div>
-    <div id="contact">
-      <a href="#">Contact us</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    <div id="context">
+      <h2>Sign up</h2>
+
     </div>
   </div>
 </body>
