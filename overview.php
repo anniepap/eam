@@ -47,7 +47,7 @@
       		<a href="#" class="dropbtn">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
         		<a href="#">Paper Submission</a>
-        		<a href="#">Submission Guidelines</a>
+        		<a href="guidelines.php">Submission Guidelines</a>
           </div>
       	</li>
       	<li class="dropdown">
@@ -135,3 +135,4 @@
     </div>
   </div>
 </body>
+</html>
