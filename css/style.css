@@ -21,7 +21,7 @@ body {
 	height: 40px;
 	position: relative;
 	bottom: 90px;
-	left: 60%;
+	left: 690px;
 }
 
 #search input[type="text"] {
@@ -50,7 +50,7 @@ body {
 	height: 40px;
 	position: relative;
 	bottom: 135px;
-	left: 87%;
+	left: 970px;
     font-size: 13px;
 }
 
@@ -64,7 +64,7 @@ body {
 	height: 40px;
 	position: relative;
     bottom: 145px;
-    right: -27%;
+    left: 303px;
     z-index: 1;
 }
 
@@ -158,7 +158,7 @@ li.dropdown {
     width: 640px;
     border-radius: 10px;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 480px;
     z-index: -1;
 }
@@ -167,7 +167,7 @@ li.dropdown {
     width: 300px;
     height: 150px;
     position: absolute;
-    left: 260px;
+    left: 245px;
     top: 140px;
     z-index: -1;
 }
@@ -186,7 +186,7 @@ li.dropdown {
     width: 250px;
     height: 120px;
     position: absolute;
-    left: 260px;
+    left: 245px;
     top: 300px;
     z-index: -1;
 }
@@ -211,7 +211,7 @@ li.dropdown {
 #context {
     width: 78%;
     position: absolute;
-    left: 22%;
+    left: 250px;
     top: 100px;
 }
 
@@ -223,6 +223,11 @@ li.dropdown {
 #context p {
     text-align: justify;
     font-size: 15;
+}
+
+#context h4 {
+    margin-bottom: 10px;
+    color: #330000;
 }
 
 #subjects {
@@ -260,7 +265,7 @@ li.dropdown {
 }
 
 #mainguidelines {
-	width: 860px;
+    width: 860px;
     height: 250px;
     position: absolute;
     left: 260px;
@@ -268,52 +273,52 @@ li.dropdown {
 }
 
 #mainguidelines p {
-	text-align: justify;
+    text-align: justify;
     font-size: 15;
 }
 
 #mainguidelines h2 {
-	color: #330000;
+    color: #330000;
     font-size: 18;
 }
 
 #formatting {
-	width: 860px;
+    width: 860px;
     position: absolute;
     left: 260px;
     top: 380px;
 }
 
 #formatting p {
-	text-align: justify;
+    text-align: justify;
     margin-bottom: 0px;
     margin-top: 5px;
     font-size: 15;
 }
 
 #formatting h2 {
-	color: #330000;
+    color: #330000;
     font-size: 18;
 }
 
 #formatting ul.no_bullet {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #formatting li.msWord {
-	background: url('../images/word.png') no-repeat left top;
-	height: 54px;
-	padding-left: 44px;
+    background: url('../images/word.png') no-repeat left top;
+    height: 54px;
+    padding-left: 44px;
     font-size: 15px;
     float: none;
 }
 
 #formatting li.Latex {
-	background: url('../images/latex.jpeg') no-repeat left top;
-	height: 54px;
-	padding-left: 44px;
+    background: url('../images/latex.jpeg') no-repeat left top;
+    height: 54px;
+    padding-left: 44px;
     font-size: 15px;
     float: none;
 }
@@ -460,7 +465,7 @@ li.dropdown {
 #pdfview {
     font-size: 14px;
     position: absolute;
-    left: 775px;
+    left: 90%;
     top: 40px;
 }
 
@@ -562,13 +567,125 @@ li.dropdown {
 }
 
 #tablestyle {
-	border-collapse: collapse;
+    border-collapse: collapse;
     width: 100%;
 } 
 
 #tablestyle th, #tablestyle td {
-	padding: 8px;
+    padding: 8px;
     text-align: left;
     font-size: 15px;
     border-bottom: 1px solid #b78562;
+}
+
+#packages_info h2 {
+    margin-top: 30px;
+    font-size: 18;
+}
+
+#packages_info h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+#packages_info p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#packages_info ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0px;
+}
+
+#packages_info li {
+    text-decoration: none;
+    font-size: 15px;
+    float: none;
+    margin-bottom: 0px;
+}
+
+#useful_info h2 {
+    color: #330000;
+    font-size: 18;
+    margin-top: 0px;
+}
+
+#signup {
+    width: 450px;
+    border-radius: 10px;
+    background-color: #e2d8cf;
+    padding: 10px 20px 30px 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#signup input[type=text], input[type=password], input[type=date] {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    position: relative;
+    left: 115px;
+    top: 40px;
+    width: 100px;
+    background-color: #4CAF50;
+    font-size: 15;
+    color: white;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    position: relative;
+    left: 105px;
+    top: 40px;
+    width: 100px;
+    background-color: #bfbfbf;
+    font-size: 15;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.required {
+    width: 170px;
+    position: relative;
+    left: 405px;
+    top: 425px;
+    color: red;
+    font-size: 15;
+    z-index: 0;
+}
+
+.wrong_us {
+    width: 200px;
+    position: relative;
+    left: 360px;
+    top: -73px;
+    color: red;
+    font-size: 15;
+    z-index: 0;
+}
+
+.wrong_pw {
+    width: 350px;
+    position: relative;
+    left: 360px;
+    top: -22px;
+    color: red;
+    font-size: 15;
+    z-index: 0;
 }

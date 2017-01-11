@@ -53,7 +53,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">EXHIBITION</a>
     	    <div class="dropdown-content">
-    		    <a href="#">Useful Info</a>
+    		    <a href="exh_info.php">Useful Info</a>
         		<a href="#">Exhibitors</a>
         		<a href="#">Register as Exhibitor</a>  		
           </div>
@@ -97,7 +97,7 @@
     <div id="context">
       <h2>Workshops</h2>
       <div class="workshop">
-        <h4>Joint Workshops: The 1st International Workshop on Virtual Reality, Gamification and Cultural Heritage & The 3rd International Workshop on 3D Research Challenges in Cultural Heritage</h4>
+        <h4>A. Joint Workshops: The 1st International Workshop on Virtual Reality, Gamification and Cultural Heritage & The 3rd International Workshop on 3D Research Challenges in Cultural Heritage</h4>
         <p><b>Date: </b>Friday 4th November, 16.00-18.30 p.m.</p>
         <p>The introduction of the first generation of virtual reality systems for consumers along with the latest developments in computer game technologies has provided numerous new possibilities of using Virtual Reality for Cultural Heritage related applications. The aim of VRGCH’2016 is to provide a forum for discussing the latest developments in the areas of Virtual Reality, gamification and Cultural Heritage so that novel applications and future perspectives are exposed to workshop delegates. Topics of interest include, but are not limited to:</p>
         <ul>
@@ -109,7 +109,7 @@
         </ul>
       </div>
       <div class="workshop">
-        <h4>Information and Communication Technologies for Cultural Heritage Applications (InCuTe4CH)</h4>
+        <h4>B. Information and Communication Technologies for Cultural Heritage Applications (InCuTe4CH)</h4>
         <p><b>Date: </b>Thursday 3rd November, 16.00-18.30 p.m.</p>
         <p>InCuTe4CH is to serve as an international forum for experts from both academia and industry to present their latest research findings, ideas, development and applications in the wide area of cultural heritage preservation, including vision based systems, search engines for efficient image retrieval photogrammetry, 3D reconstruction and publishing, semantics, learning based systems and archiving. Topics of interest include, but are not limited to the following areas:</p>
         <ul>

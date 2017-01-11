@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>
-		Euromed2016 | Home
+		Euromed2016 | Submission Guidelines
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -21,7 +21,7 @@
   	<div id="profile">
   		<form method="get">
     		<input type="image" src="images/profile_icon.png" width="28" height="28">
-    		<a href="#">Sign in</a> | <a href="sighnup.php">Sign up</a>
+    		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
   		</form>
   	</div>
   	<div id="menu">
@@ -44,7 +44,7 @@
         	</div>
       	</li>
       	<li class="dropdown">
-      		<a href="#" class="dropbtn">CALL FOR PAPERS</a>
+      		<a href="#" class="dropbtn_active">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
         		<a href="#">Paper Submission</a>
         		<a href="guidelines.php">Submission Guidelines</a>
@@ -53,7 +53,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">EXHIBITION</a>
     	    <div class="dropdown-content">
-    		    <a href="#">Useful Info</a>
+    		    <a href="exh_info.php">Useful Info</a>
         		<a href="#">Exhibitors</a>
         		<a href="#">Register as Exhibitor</a>  		
           </div>

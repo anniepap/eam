@@ -53,7 +53,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">EXHIBITION</a>
     	    <div class="dropdown-content">
-    		    <a href="#">Useful Info</a>
+    		    <a href="exh_info.php">Useful Info</a>
         		<a href="#">Exhibitors</a>
         		<a href="#">Register as Exhibitor</a>  		
           </div>
@@ -235,7 +235,7 @@
           </tr>
           <tr class="excursion">
             <th>9:30-18:30</th>
-            <td>Conference EXCURSION [Registration is mandatory] EU-FP7 PEOPLE ITN-DCH TRAINING ACTIVITY</td>
+            <td>The Conference EXCURSION: EU-FP7 PEOPLE ITN-DCH TRAINING ACTIVITY [Registration is mandatory] </td>
           </tr>
           <tr>
             <th rowspan="2">9:00-10:30</th>

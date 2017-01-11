@@ -53,7 +53,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">EXHIBITION</a>
     	    <div class="dropdown-content">
-    		    <a href="#">Useful Info</a>
+    		    <a href="exh_info.php">Useful Info</a>
         		<a href="#">Exhibitors</a>
         		<a href="#">Register as Exhibitor</a>  		
           </div>
@@ -135,4 +135,3 @@
     </div>
   </div>
 </body>
-</html>
