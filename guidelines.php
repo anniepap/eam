@@ -102,6 +102,7 @@
       <p>The Symposium <strong>accepts only original, unpublished work written in English</strong>. We are soliciting three types of contributions: The <strong>FULL (Research)</strong>, <strong>PROJECT (on-going projects)</strong> and <strong>SHORT Papers (Posters)</strong>. The papers will be evaluated based on their ... . However, the 15 best submitted papers will be published on a special issue of the International Journal Heritage in the Digital Era, published by <a href="https://uk.sagepub.com/en-gb/eur/home" target="_blank">SAGE Publisher, UK</a>. Please note that it is imperative not to delay the submission until the last minute. From our experience the submission server will be heavily loaded in the very last days.</p>
     </div>
     <div id="formatting">
+      <p><br></p>
       <h2>Formatting</h2>
       <p>For your convenience, we have summarized in the <a target="_blank" href="http://www.euromed2016.eu/index.php/download_file/view/90/190">Author Guidelines</a> document how a proceeding paper should be structured, how elements (headings, figures, references) should be formatted using our predefined styles, etc. Also for short papers here is <a target="_blank" href="http://www.euromed2016.eu/index.php/download_file/view/108/190">Poster Guidelines</a></p>
       <p>We also give some insight on how your paper will be <strong>typeset at Springer</strong> (guidelines including the copyright form):</p> 
