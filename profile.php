@@ -36,7 +36,7 @@
         	</div>
       	</li>
       	<li class="dropdown">
-      		<a href="#" class="dropbtn_active">VENUE</a>
+      		<a href="#" class="dropbtn">VENUE</a>
     	    <div class="dropdown-content">
         		<a href="venue.html">Venue Details</a>
           	<a href="travel_transport.html">Travel and Transport</a>
@@ -96,13 +96,20 @@
     </div>
     <div id="context">
       <h2>My profile</h2>
-    </div>
+    
 
     <?php
       session_start();
       $username = $_SESSION['username'];
       echo 'Hi ' . $username;
+
+            //while($row = $result->fetch_assoc()) {
+        //  echo "Username: " . $row["Username"]. " - Name: " . $row["FirstName"]. " " . $row["LastName"]. "<br>";
+        //}
     ?>
 
+
+
+</div>
   </div>
 </body>

@@ -19,7 +19,7 @@
   		</form>
   	</div>
   	<div id="profile">
-  		<form method="get">
+  		<form action="profile.php" method="get">
     		<input type="image" src="images/profile_icon.png" width="28" height="28">
     		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
   		</form>

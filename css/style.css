@@ -91,7 +91,7 @@ li {
     border-radius: 10px;
 }
 
-#menu li a:hover, .dropdown:hover .dropbtn{
+li a:hover, .dropdown:hover .dropbtn{
     background-color: #efe4dc;
     border-radius: 10px;
 }
@@ -616,9 +616,13 @@ li.dropdown {
     width: 450px;
     border-radius: 10px;
     background-color: #e2d8cf;
-    padding: 10px 20px 30px 20px;
+    padding: 5px 20px;
     font-size: 15px;
     margin-bottom: 20px;
+}
+
+#signup p {
+    color: red;
 }
 
 #signup input[type=text], input[type=password], input[type=date] {
@@ -634,7 +638,7 @@ li.dropdown {
 input[type=submit] {
     position: relative;
     left: 115px;
-    top: 40px;
+    top: 15px;
     width: 100px;
     background-color: #4CAF50;
     font-size: 15;
@@ -649,7 +653,7 @@ input[type=submit] {
 input[type=reset] {
     position: relative;
     left: 105px;
-    top: 40px;
+    top: 15px;
     width: 100px;
     background-color: #bfbfbf;
     font-size: 15;
@@ -660,31 +664,15 @@ input[type=reset] {
     cursor: pointer;
 }
 
-.required {
-    width: 170px;
-    position: relative;
-    left: 405px;
-    top: 425px;
-    color: red;
-    font-size: 15;
-    z-index: 0;
+#birthday input[type=text]{
+    width: 50px;
 }
 
-.wrong_us {
-    width: 200px;
-    position: relative;
-    left: 360px;
-    top: -73px;
-    color: red;
-    font-size: 15;
-    z-index: 0;
-}
-
-.wrong_pw {
+.wrong_bday {
     width: 350px;
     position: relative;
-    left: 360px;
-    top: -22px;
+    left: 0px;
+    top: -10px;
     color: red;
     font-size: 15;
     z-index: 0;
