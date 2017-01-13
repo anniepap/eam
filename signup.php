@@ -2,7 +2,9 @@
   require_once "login.php";
   $conn = new mysqli ($hn, $un, $pw, $db);
   if ($conn->connect_error) die ($conn->connect_error);
-  session_start();
+  if(!isset($_SESSION)) {
+    session_start();
+  }
   $error = '';
 
   $username = isset($_POST['username'])?$_POST['username']:'';
@@ -24,13 +26,13 @@
     $result = $conn->query($query);
     if (!$result) die($conn->error);
     if ($result->num_rows > 0) {
-      $error = "Username already exists.\r\n";
+      $error = "Username already exists.<br>";
     }
     if ($password != $password_con) {
-      $error = $error."Confirmation did not match the password.\r\n";
+      $error = $error."Confirmation did not match the password.<br>";
     }
     if (!preg_match("/^[0-9]+$/", $year) or !preg_match("/^[0-9]+$/", $month) or !preg_match("/^[0-9]+$/", $day)) {
-      $error = $error."Date of Birth can only contain numbers.\r\n";
+      $error = $error."Date of Birth can only contain numbers.<br>";
     }
     if (!($error != '')) {
       $birthday = $year."-".$month."-".$day;
@@ -42,7 +44,7 @@
       exit();
     }
     else {
-      $error = "<div class=\"wrong_bday\">".$error."</div>";
+      $error = "<div class=\"wrong_inp\">".$error."</div>";
     }
   }
   $conn->close();

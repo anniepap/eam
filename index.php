@@ -1,3 +1,43 @@
+<?php
+  require_once "login.php";
+  $conn = new mysqli ($hn, $un, $pw, $db);
+  if ($conn->connect_error) die ($conn->connect_error);
+  if(!isset($_SESSION)) { 
+    session_start();
+  }
+
+  $dest = "profile.php";
+  if (!isset($_SESSION['username'])) {
+    $dest = "#";
+  }
+
+  $uname = isset($_POST['uname'])?$_POST['uname']:'';
+  $psw = isset($_POST['psw'])?$_POST['psw']:'';
+  
+  if (!isset($_SESSION['loggedin'])) {
+    $log = "document.getElementById('id01').style.display='block'";
+  }
+  else {
+    $log = "#";
+  }
+
+  if (!empty($uname) and !empty($psw) and !isset($_SESSION['loggedin'])) {
+    $query = "select * from Users where username= '$uname' and password= '$psw'";
+    $result = $conn->query($query);
+    if (!$result) die($conn->error);
+    if ($result->num_rows > 0) {
+      $_SESSION['username'] = $uname;
+      $_SESSION['loggedin'] = "y";
+      header("Location: http://localhost/euromed/profile.php");
+      exit();
+    }
+    else {
+      echo "<script> alert('Username and Password do not match.'); </script>";
+    }
+  }
+  $conn->close();
+?>
+
 <html>
 <head>
 	<title>
@@ -19,11 +59,25 @@
   		</form>
   	</div>
   	<div id="profile">
-  		<form action="profile.php" method="get">
+  		<form action=<?php echo $dest ?> method="post">
     		<input type="image" src="images/profile_icon.png" width="28" height="28">
-    		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
+    		<a href="#" onclick=<?php echo $log; ?> style="width:auto;">Sign in</a> | <a href="signup.php">Sign up</a>
   		</form>
   	</div>
+
+    <div id="id01" class="modal">
+      <form class="modal-content animate" method="post">
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required="required">
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required="required">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit">Log in</button>
+        </div>
+      </form>
+    </div>
+
   	<div id="menu">
   	  <ul>
   		  <li class="dropdown">
