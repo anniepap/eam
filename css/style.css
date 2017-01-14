@@ -828,7 +828,6 @@ span.psw {
     }
 }
 
-
 .editbtn {
     font-size: 15px;
     padding: 4px 6px;
@@ -854,6 +853,16 @@ span.psw {
 
 .modal_cont_edit {
     background-color: #f7f1ed;
+}
+
+textarea {
+    width: 60%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    resize: none;
 }
 
 .edit_cont input[type=text] {

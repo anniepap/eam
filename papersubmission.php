@@ -157,8 +157,7 @@
             <option value="W3">1st International Workshop on Virtual Reality...</option>
             <option value="W4">Information and Communication Technologies...</option>
             <option value="W5">Re-Thinking Management and Valorization of Middle East Cultural Heritage...</option>
-          </select>
-          <br>
+          </select> <br>
           <div id="moreAuthors">
             Author:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
             Email:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -168,7 +167,26 @@
             <input type="text" class="onethird" value="<?php $authaffill = isset($_POST['authaffill'])?$_POST['authaffill']:''; echo htmlspecialchars($authaffill);?>" name="authaffill" required="required">
             &emsp;
             <input type="button" class="addbutton" value="" onClick="addInput('moreAuthors');">
-          </div>
+          </div> 
+          Abstract: <br>
+          <textarea maxlength="500" size="500"></textarea><br>
+          Keywords: <br>
+          <input type="checkbox" name="KW" value="K1"> Keyword1&emsp;&emsp;&emsp;&emsp;
+          <input type="checkbox" name="KW" value="K2"> Keyword2&emsp;&emsp;&emsp;&emsp;
+          <input type="checkbox" name="KW" value="K3"> Keyword3&emsp;&emsp;&emsp;&emsp;<br>
+          <input type="checkbox" name="KW" value="K4"> Keyword4&emsp;&emsp;&emsp;&emsp;
+          <input type="checkbox" name="KW" value="K5"> Keyword5&emsp;&emsp;&emsp;&emsp;
+          <input type="checkbox" name="KW" value="K6"> Keyword6&emsp;&emsp;&emsp;&emsp;<br><br>
+          Upload File: <br>
+          <td>
+          <input type="hidden" name="MAX_FILE_SIZE" value="15728640">
+          <input type="file" name="attachfile" size="48" accept=".pdf">
+          <input type="submit" name="attach" value="submitfile" style="display: none;">
+    
+          (max.&nbsp;15
+          <small>&nbsp;M</small>
+          )
+          </td>                    
         </form>
       </div>
     </div>
