@@ -46,7 +46,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn_active">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
-        		<a href="#">Paper Submission</a>
+        		<a href="papersubmission.php">Paper Submission</a>
         		<a href="guidelines.php">Submission Guidelines</a>
           </div>
       	</li>
@@ -144,6 +144,8 @@
       </div>
       <p><br></p>
       <p><strong>Note:</strong> Space will be available for "Exhibition and Live Showcases". If you have a system you wish included in the exhibition or showcase area, please contact the organizers (email: <a href="mailto:chairman@euromed2016.eu">chairman@euromed2016.eu</a>) and see Important dates.</p>
+      <p><br></p>
+      <a href="papersubmission.php" class="shortcutbutton">Submit</a>
       <p><br></p>
     </div>
   </div>

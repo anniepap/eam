@@ -46,7 +46,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
-        		<a href="#">Paper Submission</a>
+        		<a href="papersubmission.php">Paper Submission</a>
         		<a href="guidelines.php">Submission Guidelines</a>
           </div>
       	</li>
@@ -125,6 +125,8 @@
           <li>Semantic annotation methods for cultural heritage data</li>
         </ul>
         <p><b>Note: </b>The specific workshop will be part of the EU 4D-CH-World, the H2020 COOP-8 ViMM and the ITN-DCH projects.</p>
+        <br>
+        <a href="papersubmission.php" class="shortcutbutton">Submit</a>
       </div>
     </div>
   </div>

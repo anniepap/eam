@@ -124,7 +124,7 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">CALL FOR PAPERS</a>
     	    <div class="dropdown-content">
-        		<a href="#">Paper Submission</a>
+        		<a href="papersubmission.php">Paper Submission</a>
         		<a href="guidelines.php">Submission Guidelines</a>
           </div>
       	</li>
