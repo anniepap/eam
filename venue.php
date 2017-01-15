@@ -119,7 +119,7 @@
     <div id="dates">
     <table class="sidetable">
       <tr>
-        <th><a href="#">Important Dates</a></th>
+        <th><a href="dates.php">Important Dates</a></th>
       </tr>
       <tr>
         <td>Date 1</td>

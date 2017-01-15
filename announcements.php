@@ -1,47 +1,7 @@
-<?php
-  require_once "login.php";
-  $conn = new mysqli ($hn, $un, $pw, $db);
-  if ($conn->connect_error) die ($conn->connect_error);
-  if(!isset($_SESSION)) { 
-    session_start();
-  }
-
-  $dest = "profile.php";
-  if (!isset($_SESSION['username'])) {
-    $dest = "#";
-  }
-
-  $uname = isset($_POST['uname'])?$_POST['uname']:'';
-  $psw = isset($_POST['psw'])?$_POST['psw']:'';
-  
-  if (!isset($_SESSION['loggedin'])) {
-    $log = "document.getElementById('id01').style.display='block'";
-  }
-  else {
-    $log = "#";
-  }
-
-  if (!empty($uname) and !empty($psw) and !isset($_SESSION['loggedin'])) {
-    $query = "select * from Users where username= '$uname' and password= '$psw'";
-    $result = $conn->query($query);
-    if (!$result) die($conn->error);
-    if ($result->num_rows > 0) {
-      $_SESSION['username'] = $uname;
-      $_SESSION['loggedin'] = "y";
-      header("Location: http://localhost/euromed/profile.php");
-      exit();
-    }
-    else {
-      echo "<script> alert('Username and Password do not match.'); </script>";
-    }
-  }
-  $conn->close();
-?>
-
 <html>
 <head>
 	<title>
-		Euromed2016 | Home
+		Euromed2016 | Important Dates
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -59,25 +19,11 @@
   		</form>
   	</div>
   	<div id="profile">
-  		<form action=<?php echo $dest ?> method="post">
+  		<form method="get">
     		<input type="image" src="images/profile_icon.png" width="28" height="28">
-    		<a href="#" onclick=<?php echo $log; ?> style="width:auto;">Sign in</a> | <a href="signup.php">Sign up</a>
+    		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
   		</form>
   	</div>
-
-    <div id="id01" class="modal">
-      <form class="modal-content animate" method="post">
-        <div class="container">
-          <label><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required="required">
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required="required">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="submit">Log in</button>
-        </div>
-      </form>
-    </div>
-
   	<div id="menu">
   	  <ul>
   		  <li class="dropdown">
@@ -92,8 +38,8 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">VENUE</a>
     	    <div class="dropdown-content">
-        		<a href="venue.php">Venue Details</a>
-          	<a href="travel_transport.php">Travel and Transport</a>
+        		<a href="venue.html">Venue Details</a>
+          	<a href="travel_transport.html">Travel and Transport </a>
           	<a href="#">About Cyprus</a>
         	</div>
       	</li>
@@ -113,7 +59,7 @@
           </div>
       	</li>
     		<li><a href="register.php">REGISTER</a></li>
-    		<li><a href="#">SPONSORS</a></li>
+    		<li><a href="sponsors.php">SPONSORS</a></li>
     	</ul>
     </div>
     <div id="dates">
@@ -148,17 +94,55 @@
       </tr>
     </table>
     </div>
-    <img id="parthenon" src="images/parthenon.jpg"/>
-    <div id="info">
-      <h2>OCT 31 - NOV 5</h2>
-      <h3>Nicosia, Cyprus</h3>
-    </div>
-    <div id="countdown">
-      <h4>Countdown:</h4>
-      <h2>00 : 00 : 00</h2>
-    </div>
-    <div id="contact">
-      <a href="#">Contact us</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    <div>
+      <div id="context">
+        <h2>Important Dates</h2>
+        <div class="timetable">
+          <table class="dayprogram">
+          <tr class="break">
+            <th>Announement 1</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr>
+            <th>Announement 2</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr class="break">
+            <th>Announement 3</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr>
+            <th>Announement 4</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr>
+            <th>Announement 5</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr>
+            <th>Announement 6</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr class="break">
+            <th>Announement 7</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr class="break">
+            <th>Announement 8</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr>
+            <th>Announement 9</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          <tr class="break">
+            <th>Announement 10</th>
+            <td>[Event Name / Description]</td>
+          </tr>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </body>
+</html>
