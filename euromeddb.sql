@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 13 Ιαν 2017 στις 20:32:12
--- Έκδοση διακομιστή: 10.1.19-MariaDB
--- Έκδοση PHP: 7.0.13
+-- Host: 127.0.0.1
+-- Generation Time: Jan 15, 2017 at 03:29 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,61 +17,56 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Βάση δεδομένων: `euromeddb`
+-- Database: `euromeddb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `authors`
+-- Table structure for table `authors`
 --
 
 CREATE TABLE `authors` (
   `Name` varchar(45) NOT NULL,
   `Email` varchar(45) NOT NULL,
   `Affiliation` varchar(45) NOT NULL,
-  `papers.PaperID` int(11) NOT NULL
+  `PaperID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `daily`
+-- Table structure for table `buy`
 --
 
-CREATE TABLE `daily` (
-  `PurchaseID` int(11) NOT NULL,
+CREATE TABLE `buy` (
+  `BuyID` int(11) NOT NULL,
+  `Username` varchar(45) COLLATE utf8_bin NOT NULL,
   `PurchaseDate` date NOT NULL,
-  `PaymentWay` varchar(45) NOT NULL,
-  `Days` varchar(45) NOT NULL,
-  `Addons` varchar(45) NOT NULL,
-  `Students` int(11) DEFAULT NULL,
-  `NonStudents` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `EntireAddons` varchar(45) COLLATE utf8_bin NOT NULL,
+  `EntireParticipants` varchar(45) COLLATE utf8_bin NOT NULL,
+  `DailyDays` varchar(45) COLLATE utf8_bin NOT NULL,
+  `DailyAddons` varchar(45) COLLATE utf8_bin NOT NULL,
+  `DailyParticipants` varchar(45) COLLATE utf8_bin NOT NULL,
+  `Total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `buy`
+--
+
+INSERT INTO `buy` (`BuyID`, `Username`, `PurchaseDate`, `EntireAddons`, `EntireParticipants`, `DailyDays`, `DailyAddons`, `DailyParticipants`, `Total`) VALUES
+(1, 'a', '2017-01-15', '0-0', '3-0', '11001000000', '7-6-0', '7-0', 7300),
+(2, 'a', '2017-01-15', '0-3', '4-0', '11110000000', '0-0-0', '3-0', 5145);
 
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `entire`
---
-
-CREATE TABLE `entire` (
-  `PurchaseID` int(11) NOT NULL,
-  `PurchaseDate` date NOT NULL,
-  `PaymentWay` varchar(45) NOT NULL,
-  `Addons` varchar(45) NOT NULL,
-  `Students` int(11) DEFAULT NULL,
-  `NonStudents` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Δομή πίνακα για τον πίνακα `exhibitors`
+-- Table structure for table `exhibitors`
 --
 
 CREATE TABLE `exhibitors` (
-  `Users.Username` varchar(45) NOT NULL,
+  `Username` varchar(45) NOT NULL,
   `RepFirstName` varchar(45) NOT NULL,
   `RepLastName` varchar(45) NOT NULL,
   `Phone` int(11) NOT NULL,
@@ -87,12 +82,12 @@ CREATE TABLE `exhibitors` (
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `papers`
+-- Table structure for table `papers`
 --
 
 CREATE TABLE `papers` (
   `PaperID` int(11) NOT NULL,
-  `users.Username` varchar(45) NOT NULL,
+  `Username` varchar(45) NOT NULL,
   `Topic` varchar(45) NOT NULL,
   `Type` varchar(45) NOT NULL,
   `Abstract` varchar(500) NOT NULL,
@@ -103,20 +98,7 @@ CREATE TABLE `papers` (
 -- --------------------------------------------------------
 
 --
--- Δομή πίνακα για τον πίνακα `participants`
---
-
-CREATE TABLE `participants` (
-  `Users.Username` varchar(45) NOT NULL,
-  `Total` int(11) NOT NULL,
-  `Daily.PurchaseID` int(11) NOT NULL,
-  `Entire.PurchaseID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Δομή πίνακα για τον πίνακα `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -132,7 +114,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Άδειασμα δεδομένων του πίνακα `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`Username`, `Password`, `Email`, `DateOfBirth`, `FirstName`, `LastName`, `Affiliation`, `Country`, `Photo`) VALUES
@@ -142,66 +124,48 @@ INSERT INTO `users` (`Username`, `Password`, `Email`, `DateOfBirth`, `FirstName`
 ('JohnDoe', 'password', 'johndoe@example.com', '1990-01-01', 'John', 'Doe', 'example', 'USA', NULL);
 
 --
--- Ευρετήρια για άχρηστους πίνακες
+-- Indexes for dumped tables
 --
 
 --
--- Ευρετήρια για πίνακα `authors`
+-- Indexes for table `authors`
 --
 ALTER TABLE `authors`
   ADD PRIMARY KEY (`Email`);
 
 --
--- Ευρετήρια για πίνακα `daily`
+-- Indexes for table `buy`
 --
-ALTER TABLE `daily`
-  ADD PRIMARY KEY (`PurchaseID`);
+ALTER TABLE `buy`
+  ADD PRIMARY KEY (`BuyID`);
 
 --
--- Ευρετήρια για πίνακα `entire`
---
-ALTER TABLE `entire`
-  ADD PRIMARY KEY (`PurchaseID`);
-
---
--- Ευρετήρια για πίνακα `exhibitors`
+-- Indexes for table `exhibitors`
 --
 ALTER TABLE `exhibitors`
-  ADD PRIMARY KEY (`Users.Username`);
+  ADD PRIMARY KEY (`Username`);
 
 --
--- Ευρετήρια για πίνακα `papers`
+-- Indexes for table `papers`
 --
 ALTER TABLE `papers`
   ADD PRIMARY KEY (`PaperID`);
 
 --
--- Ευρετήρια για πίνακα `participants`
---
-ALTER TABLE `participants`
-  ADD PRIMARY KEY (`Users.Username`);
-
---
--- Ευρετήρια για πίνακα `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Username`);
 
 --
--- Περιορισμοί για άχρηστους πίνακες
+-- Constraints for dumped tables
 --
 
 --
--- Περιορισμοί για πίνακα `exhibitors`
+-- Constraints for table `exhibitors`
 --
 ALTER TABLE `exhibitors`
-  ADD CONSTRAINT `exhibitors_ibfk_1` FOREIGN KEY (`Users.Username`) REFERENCES `users` (`Username`);
-
---
--- Περιορισμοί για πίνακα `participants`
---
-ALTER TABLE `participants`
-  ADD CONSTRAINT `participants_ibfk_1` FOREIGN KEY (`Users.Username`) REFERENCES `users` (`Username`);
+  ADD CONSTRAINT `exhibitors_ibfk_1` FOREIGN KEY (`Username`) REFERENCES `users` (`Username`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

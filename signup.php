@@ -5,6 +5,37 @@
   if(!isset($_SESSION)) {
     session_start();
   }
+
+  $dest = "profile.php";
+  if (!isset($_SESSION['username'])) {
+    $dest = "#";
+  }
+
+  $uname = isset($_POST['uname'])?$_POST['uname']:'';
+  $psw = isset($_POST['psw'])?$_POST['psw']:'';
+  
+  if (!isset($_SESSION['loggedin'])) {
+    $log = "document.getElementById('id01').style.display='block'";
+  }
+  else {
+    $log = "#";
+  }
+
+  if (!empty($uname) and !empty($psw) and !isset($_SESSION['loggedin'])) {
+    $query = "select * from Users where username= '$uname' and password= '$psw'";
+    $result = $conn->query($query);
+    if (!$result) die($conn->error);
+    if ($result->num_rows > 0) {
+      $_SESSION['username'] = $uname;
+      $_SESSION['loggedin'] = "y";
+      header("Location: http://localhost/euromed/profile.php");
+      exit();
+    }
+    else {
+      echo "<script> alert('Username and Password do not match.'); </script>";
+    }
+  }
+
   $error = '';
 
   $username = isset($_POST['username'])?$_POST['username']:'';
@@ -60,22 +91,36 @@
 <body>
   <div id="page">
     <div id="logo">
-  		<a href="index.php">
-  			<img src="images/logo2.png"/>
-  		</a>
-  	</div>
+      <a href="index.php">
+        <img src="images/logo2.png"/>
+      </a>
+    </div>
     <div id="search">
-  		<form method="get">
-    		<input type="text" name="search" placeholder="Search...">
-    		<input type="image" src="images/search_icon.png">
-  		</form>
-  	</div>
-  	<div id="profile">
-  		<form method="get">
-    		<input type="image" src="images/profile_icon.png" width="28" height="28">
-    		<a href="#">Sign in</a> | <a href="signup.php">Sign up</a>
-  		</form>
-  	</div>
+      <form method="get">
+        <input type="text" name="search" placeholder="Search...">
+        <input type="image" src="images/search_icon.png">
+      </form>
+    </div>
+    <div id="profile">
+      <form action=<?php echo $dest ?> method="post">
+        <input type="image" src="images/profile_icon.png" width="28" height="28">
+        <a href="#" onclick=<?php echo $log; ?> style="width:auto;">Sign in</a> | <a href="signup.php">Sign up</a>
+      </form>
+    </div>
+
+    <div id="id01" class="modal">
+      <form class="modal-content animate" method="post">
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required="required">
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required="required">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit">Log in</button>
+        </div>
+      </form>
+    </div>
+
   	<div id="menu">
   	  <ul>
   		  <li class="dropdown">
@@ -90,8 +135,8 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">VENUE</a>
     	    <div class="dropdown-content">
-        		<a href="venue.html">Venue Details</a>
-          	<a href="travel_transport.html">Travel and Transport</a>
+        		<a href="venue.php">Venue Details</a>
+          	<a href="travel_transport.php">Travel and Transport</a>
           	<a href="#">About Cyprus</a>
         	</div>
       	</li>
@@ -111,7 +156,7 @@
           </div>
       	</li>
     		<li><a href="register.php">REGISTER</a></li>
-    		<li><a href="sponsors.php">SPONSORS</a></li>
+    		<li><a href="#">SPONSORS</a></li>
     	</ul>
     </div>
     <div id="dates">
@@ -167,7 +212,7 @@
           <input type="password" name="pwd_con" required="required">
           <br>
           E-mail:<br>
-          <input type="text" value="<?php $email = isset($_POST['email'])?$_POST['email']:''; echo htmlspecialchars($email);?>" name="email" required="required">
+          <input type="email" value="<?php $email = isset($_POST['email'])?$_POST['email']:''; echo htmlspecialchars($email);?>" name="email" required="required">
           <br>
           Date of Birth:<br>
           <div id="birthday">

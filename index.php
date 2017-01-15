@@ -92,8 +92,8 @@
       	<li class="dropdown">
       		<a href="#" class="dropbtn">VENUE</a>
     	    <div class="dropdown-content">
-        		<a href="venue.html">Venue Details</a>
-          	<a href="travel_transport.html">Travel and Transport</a>
+        		<a href="venue.php">Venue Details</a>
+          	<a href="travel_transport.php">Travel and Transport</a>
           	<a href="#">About Cyprus</a>
         	</div>
       	</li>
@@ -113,7 +113,7 @@
           </div>
       	</li>
     		<li><a href="register.php">REGISTER</a></li>
-    		<li><a href="sponsors.php">SPONSORS</a></li>
+    		<li><a href="#">SPONSORS</a></li>
     	</ul>
     </div>
     <div id="dates">
